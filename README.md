@@ -2,7 +2,7 @@
 
 ```sh
 
-The following environment has been tested and verified:
+# The following environment has been tested and verified:
 OS: Ubuntu 20.04 or higher 
 Python: 3.11 (Recommended)
 CUDA: 12.1 
@@ -18,7 +18,9 @@ PyTorch: 2.5.1
 https://www.kaggle.com/datasets/liminghao123/dut-sewer3d-semantic-segmentation-s3dss-dataset/code
 
 # Dataset path
-
+# reate a folder named "data" in the root directory and place the dataset in this folder.
+# Example: My dataset path：
+/userData/gpulij/sewer3d/data
 
 ```
 
