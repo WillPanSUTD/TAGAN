@@ -67,6 +67,9 @@ python3 setup.py install
 
 ```sh
 # To start training, use the following command. You can specify the GPU ID using CUDA_VISIBLE_DEVICES.
+# Before running, modify line 91 of the train_sewer3d.py file: `classifier = Model(c=feat_dim, k=num_class, experiment_type='III').to(device)`.
+# experiment_type='III' 改为 experiment_type='Ⅳ'
+# For a detailed explanation, please refer to the end of the GraphAttention_multiscaleV1.py file.
 
 # Example: Training on GPU 2
 CUDA_VISIBLE_DEVICES=2 python train_sewer3d.py
