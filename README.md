@@ -33,19 +33,19 @@ python3 setup.py install
 
 ```sh
 # If you encounter a version mismatch during pointops compilation (e.g., system CUDA is 11.8 but PyTorch is 12.1), execute the following within your conda environment:
-# 1.Install CUDA Toolkit 12.1 in Conda:
+# Step 1.Install CUDA Toolkit 12.1 in Conda:
 conda install -c "nvidia/label/cuda-12.1.1" cuda-toolkit
 
-# 2.Set Environment Variables:
+# Step 2.Set Environment Variables:
 export CUDA_HOME=$CONDA_PREFIX
 export PATH=$CONDA_PREFIX/bin:$PATH
 
-# 3.Clean and Recompile:
+# Step 3.Clean and Recompile:
 rm -rf build/ dist/ *.egg-info 
 python3 setup.py install
 ```
 
-## Troubleshooting: CUDA Version Conflict
+## Training
 
 ```sh
 # To start training, use the following command. You can specify the GPU ID using CUDA_VISIBLE_DEVICES.
