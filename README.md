@@ -12,3 +12,10 @@ pip install sharedarray
 cd lib/pointops
 python3 setup.py install
 ```
+
+## Dataset preparation
+
+```sh
+Download the dataset from the following link.
+https://www.kaggle.com/datasets/liminghao123/dut-sewer3d-semantic-segmentation-s3dss-dataset/code
+```
