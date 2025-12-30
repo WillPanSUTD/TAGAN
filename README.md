@@ -1,4 +1,6 @@
-## Environment Requirements
+## 1.Environment Requirements
+
+```sh
 
 The following environment has been tested and verified:
 OS: Ubuntu 20.04 or higher 
@@ -6,7 +8,21 @@ Python: 3.11 (Recommended)
 CUDA: 12.1 
 PyTorch: 2.5.1
 
-## Installation
+```
+
+## 2.Data preparation
+
+```sh
+
+# Download the dataset from the following link.
+https://www.kaggle.com/datasets/liminghao123/dut-sewer3d-semantic-segmentation-s3dss-dataset/code
+
+# Dataset path
+
+
+```
+
+## 3.Installation
 
 ```sh
 # Step 1: Create Virtual Environment
@@ -29,7 +45,7 @@ cd lib/pointops
 python3 setup.py install
 ```
 
-## Troubleshooting: CUDA Version Conflict
+## 4.Troubleshooting: CUDA Version Conflict
 
 ```sh
 # If you encounter a version mismatch during pointops compilation (e.g., system CUDA is 11.8 but PyTorch is 12.1), execute the following within your conda environment:
@@ -45,7 +61,7 @@ rm -rf build/ dist/ *.egg-info
 python3 setup.py install
 ```
 
-## Training
+## 5.Training
 
 ```sh
 # To start training, use the following command. You can specify the GPU ID using CUDA_VISIBLE_DEVICES.
