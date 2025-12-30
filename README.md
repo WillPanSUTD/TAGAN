@@ -9,21 +9,21 @@ PyTorch: 2.5.1
 ## Installation
 
 ```sh
-## Step 1: Create Virtual Environment
+# Step 1: Create Virtual Environment
 conda create -n sewer3d python=3.11 -y
 conda activate sewer3d
 
-## Step 2: Install PyTorch and Dependencies
-## We recommend using PyTorch 2.5.1 with CUDA 12.1 support.
+# Step 2: Install PyTorch and Dependencies
+# We recommend using PyTorch 2.5.1 with CUDA 12.1 support.
 # Install PyTorch
 pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121 
 
 # Install other requirements
 pip install sharedarray tqdm open3d
 
-## Step 3: Compile PointOps
-## pointops requires the CUDA compiler (nvcc) version to strictly match the PyTorch CUDA version.
-## If your system CUDA is not 12.1, please follow the "CUDA Version Conflict" section below first.
+# Step 3: Compile PointOps
+# pointops requires the CUDA compiler (nvcc) version to strictly match the PyTorch CUDA version.
+# If your system CUDA is not 12.1, please follow the "CUDA Version Conflict" section below first.
 
 cd lib/pointops
 python3 setup.py install
@@ -32,15 +32,15 @@ python3 setup.py install
 ## Troubleshooting: CUDA Version Conflict
 
 ```sh
-## If you encounter a version mismatch during pointops compilation (e.g., system CUDA is 11.8 but PyTorch is 12.1), execute the following within your conda environment:
-1.Install CUDA Toolkit 12.1 in Conda:
+# If you encounter a version mismatch during pointops compilation (e.g., system CUDA is 11.8 but PyTorch is 12.1), execute the following within your conda environment:
+# 1.Install CUDA Toolkit 12.1 in Conda:
 conda install -c "nvidia/label/cuda-12.1.1" cuda-toolkit
 
-2.Set Environment Variables:
+# 2.Set Environment Variables:
 export CUDA_HOME=$CONDA_PREFIX
 export PATH=$CONDA_PREFIX/bin:$PATH
 
-3.Clean and Recompile:
+# 3.Clean and Recompile:
 rm -rf build/ dist/ *.egg-info 
 python3 setup.py install
 ```
@@ -48,7 +48,7 @@ python3 setup.py install
 ## Troubleshooting: CUDA Version Conflict
 
 ```sh
-## To start training, use the following command. You can specify the GPU ID using CUDA_VISIBLE_DEVICES.
+# To start training, use the following command. You can specify the GPU ID using CUDA_VISIBLE_DEVICES.
 
 # Example: Training on GPU 2
 CUDA_VISIBLE_DEVICES=2 python train_sewer3d.py
