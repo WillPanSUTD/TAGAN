@@ -10,21 +10,7 @@ PyTorch: 2.5.1
 
 ```
 
-## 2.Data preparation
-
-```sh
-
-# Download the dataset from the following link.
-https://www.kaggle.com/datasets/liminghao123/dut-sewer3d-semantic-segmentation-s3dss-dataset/code
-
-# Dataset path
-# reate a folder named "data" in the root directory and place the dataset in this folder.
-# Example: My dataset path：
-/userData/gpulij/sewer3d/data
-
-```
-
-## 3.Installation
+## 2.Installation
 
 ```sh
 # Step 1: Create Virtual Environment
@@ -45,6 +31,20 @@ pip install sharedarray tqdm open3d
 
 cd lib/pointops
 python3 setup.py install
+```
+
+## 3.Data preparation
+
+```sh
+
+# Download the dataset from the following link.
+https://www.kaggle.com/datasets/liminghao123/dut-sewer3d-semantic-segmentation-s3dss-dataset/code
+
+# Dataset path
+# reate a folder named "data" in the root directory and place the dataset in this folder.
+# Example: My dataset path：
+/userData/gpulij/sewer3d/data
+
 ```
 
 ## 4.Troubleshooting: CUDA Version Conflict
